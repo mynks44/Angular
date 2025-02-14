@@ -1,0 +1,54 @@
+/* Section Title Styling */
+.section-title {
+    background: lightblue;
+    padding: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Email Link Styling */
+.email-link {
+    color: blue;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Header Row */
+th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+/* Alternating Row Colors */
+tr:nth-child(odd) {
+    background-color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Highlighted Row for Jane Austen */
+.highlighted {
+    background-color: lightgray !important;
+    font-weight: bold;
+}

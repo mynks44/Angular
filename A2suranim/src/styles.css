@@ -1,0 +1,103 @@
+/* Global Header Styling */
+.header-title {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+}
+
+/* Tabs Styling */
+.tabs-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.tab {
+    font-weight: bold;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Section Headers */
+.section-header {
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.section-header.highlight {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Input Box Styling */
+.input-container {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.input-label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.campus-input {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid black;
+    font-size: 14px;
+}
+
+/* Clear Button Styling - Oval Shape */
+.clear-button {
+    display: block;
+    margin: 10px auto;
+    background-color: white; /* White background */
+    color: blue; /* Blue text */
+    border: 2px solid blue; /* Blue border */
+    padding: 12px 30px; /* Increased padding for oval shape */
+    font-weight: bold;
+    border-radius: 50px; /* Large border-radius to make it oval */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+.clear-button:hover {
+    background-color: blue; /* Blue background on hover */
+    color: white; /* White text on hover */
+    transform: scale(1.05);
+}
+
+
+
+/* Home Campus Display */
+.home-campus {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Not Home Campus Styling */
+.not-home-campus {
+    font-size: 18px;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+/* First Tab Styling - Blue Color */
+.tab:first-child {
+    background-color: blue;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}

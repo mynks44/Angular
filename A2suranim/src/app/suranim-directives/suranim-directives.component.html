@@ -1,0 +1,21 @@
+<div class="section-header">Mayank Surani</div>
+<hr>
+<div class="section-header highlight">
+    Enter a Campus Name Below - Campus Selected: {{ suranimCampus | uppercase }}
+</div>
+<hr>
+
+<div class="input-container">
+    <label class="input-label">Campus Input:</label>
+    <input type="text" [(ngModel)]="suranimCampus" class="campus-input" />
+</div>
+
+<button class="clear-button" (click)="suranimCampus = ''">Click here to clear Input box</button>
+
+<h4 *ngIf="suranimCampus.toLowerCase() === 'davis'; else notHome" class="home-campus">
+    This is MY Home Campus: {{ suranimCampus | uppercase }}
+</h4>
+
+<ng-template #notHome>
+    <h4 class="not-home-campus">Campus data entered in input is NOT my home campus: {{ suranimCampus | uppercase }}</h4>
+</ng-template>

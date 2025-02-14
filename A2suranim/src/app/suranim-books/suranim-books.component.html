@@ -1,0 +1,43 @@
+<!-- My Book List Section -->
+<h4 class="section-title"> 
+    My Book List - {{ personalData.FullNamesuranim | uppercase }}
+</h4>
+
+<!-- Email Section -->
+<h4 class="section-title">
+    Email me with your recommendations at: 
+    <a href="mailto:{{ personalData.EmailSheridansuranim }}" class="email-link">
+      {{ personalData.EmailSheridansuranim }}
+    </a>
+</h4>
+
+<!-- Book Table -->
+<table mat-table [dataSource]="music" class="mat-elevation-z8 full-width-table">
+
+    <!-- Author Column -->
+    <ng-container matColumnDef="authorName">
+        <th mat-header-cell *matHeaderCellDef> Author Name </th>
+        <td mat-cell *matCellDef="let book" [ngClass]="{'highlighted': book.authorName === 'Jane Austen'}"> 
+          {{ book.authorName }} 
+        </td>
+    </ng-container>
+
+    <!-- Title Column -->
+    <ng-container matColumnDef="bookTitle">
+        <th mat-header-cell *matHeaderCellDef> Book Title </th>
+        <td mat-cell *matCellDef="let book"> {{ book.bookTitle }} </td>
+    </ng-container>
+
+    <!-- Genre Column -->
+    <ng-container matColumnDef="genre">
+        <th mat-header-cell *matHeaderCellDef> Book Genre </th>
+        <td mat-cell *matCellDef="let book"> {{ book.genre }} </td>
+    </ng-container>
+
+    <!-- Header Row -->
+    <tr mat-header-row *matHeaderRowDef="['authorName', 'bookTitle', 'genre']"></tr>
+
+    <!-- Data Rows -->
+    <tr mat-row *matRowDef="let row; columns: ['authorName', 'bookTitle', 'genre'];"></tr>
+
+</table>
