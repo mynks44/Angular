@@ -1,0 +1,19 @@
+<mat-grid-list cols="2" rowHeight="300px">
+  <mat-grid-tile>
+    <div class="center-content">
+      <h2>Comets</h2>
+      <p>A <b>comet</b> is an icy, small Solar System body that warms and begins to release gases when passing close to the Sun, a process called outgassing.</p>
+      <p>From: <a href="https://en.wikipedia.org/wiki/Comet#:~:text=A%20comet%20is%20an%20icy,blown%20out%20from%20the%20coma." target="_blank">https://en.wikipedia.org/wiki/Comet</a></p>
+      <button mat-button (click)="suranimServiceCall('cometImg', './images/suranimCOMET.jpg')" class="rounded-button">
+        Click to see Comet Example
+      </button>
+      <button mat-button (click)="suranimServiceCall('cometImg', './images/suranimSpace.jpg')" class="rounded-button">
+        Click to return to General Space Image
+      </button>
+    </div>
+  </mat-grid-tile>
+  
+  <mat-grid-tile>
+    <img id="cometImg" src="./images/suranimSpace.jpg" width="300px">
+  </mat-grid-tile>
+</mat-grid-list>

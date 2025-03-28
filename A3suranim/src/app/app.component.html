@@ -1,0 +1,27 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<app-suranim-header [fullName]="studentSuranim.fullName991770027" 
+                     [id]="studentSuranim.id991770027"></app-suranim-header>
+
+<mat-toolbar class="toolbar">
+  <div class="button-container">
+    <button mat-fab extended [ngStyle]="{'background-color': '#4285F4', 'color': 'white'}" routerLink="/asteroid">
+      <mat-icon>stars</mat-icon>
+      Asteroid
+    </button>
+    <button mat-fab extended [ngStyle]="{'background-color': '#DB4437', 'color': 'white'}" routerLink="/meteorite">
+      <mat-icon>cloud</mat-icon>
+      Meteorite
+    </button>
+    <button mat-fab extended [ngStyle]="{'background-color': '#F4B400', 'color': 'white'}" routerLink="/comet">
+      <mat-icon>flash_on</mat-icon>
+      Comet
+    </button>
+  </div>
+</mat-toolbar>
+
+<div class="content-container">
+  <router-outlet></router-outlet>
+</div>
+
+<app-suranim-footer [email]="studentSuranim.email991770027" 
+                     [login]="studentSuranim.login991770027"></app-suranim-footer>

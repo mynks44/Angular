@@ -1,0 +1,19 @@
+<mat-grid-list cols="2" rowHeight="300px">
+  <mat-grid-tile>
+    <div class="center-content">
+      <h2>Asteroids</h2>
+      <p>An <b>asteroid</b> is a minor planet—an object larger than a meteoroid that is neither a planet nor an identified comet—that orbits within the inner Solar System or is co-orbital with Jupiter <b>(Trojan asteroids)</b>.</p>
+      <p>From: <a href="https://en.wikipedia.org/wiki/Asteroid#:~:text=An%20asteroid%20is%20a%20minor,with%20Jupiter%20(Trojan%20asteroids)." target="_blank">https://en.wikipedia.org/wiki/Asteroid</a></p>
+      <button mat-button (click)="suranimServiceCall('asteroidImg', './images/suranimASTEROID.jpg')" class="rounded-button">
+        Click to see Asteroid Example
+      </button>
+      <button mat-button (click)="suranimServiceCall('asteroidImg', './images/suranimSpace.jpg')" class="rounded-button">
+        Click to return to General Space Image
+      </button>
+    </div>
+  </mat-grid-tile>
+  
+  <mat-grid-tile>
+    <img id="asteroidImg" src="./images/suranimSpace.jpg" width="300px">
+  </mat-grid-tile>
+</mat-grid-list>

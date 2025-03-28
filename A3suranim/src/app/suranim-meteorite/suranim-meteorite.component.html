@@ -1,0 +1,19 @@
+<mat-grid-list cols="2" rowHeight="300px">
+  <mat-grid-tile>
+    <div class="center-content">
+      <h2>Meteorites</h2>
+      <p>A <b>Meteorite</b> is a rock that originated in outer space and has fallen to the surface of a planet or moon.</p>
+      <p>From: <a href="https://en.wikipedia.org/wiki/Meteorite" target="_blank">https://en.wikipedia.org/wiki/Meteorite</a></p>
+      <button mat-button (click)="suranimServiceCall('meteoriteImg', './images/suranimMETEORITE.jpg')" class="rounded-button">
+        Click to see Meteorite Example
+      </button>
+      <button mat-button (click)="suranimServiceCall('meteoriteImg', './images/suranimSpace.jpg')" class="rounded-button">
+        Click to return to General Space Image
+      </button>
+    </div>
+  </mat-grid-tile>
+  
+  <mat-grid-tile>
+    <img id="meteoriteImg" src="./images/suranimSpace.jpg" width="300px">
+  </mat-grid-tile>
+</mat-grid-list>
