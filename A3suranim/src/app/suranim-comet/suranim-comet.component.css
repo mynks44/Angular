@@ -1,30 +1,51 @@
 .rounded-button {
-    border-radius: 20px;
-    padding: 10px 20px;
-    margin: 5px;
-    background-color: #d0e7ff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  border-radius: 20px;
+  padding: 12px 25px;
+  margin: 5px;
+  background-color: #d0e7ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  min-width: 150px;
+}
+
+.rounded-button:hover {
+  background-color: #c1daf6;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.mat-grid-tile img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .rounded-button {
+    font-size: 14px;
+    padding: 8px 16px;
+    min-width: 120px;
   }
-  
-  .rounded-button:hover {
-    background-color: #c1daf6;
+}
+
+@media (max-width: 425px) {
+  .rounded-button {
+    font-size: 12px;
+    padding: 6px 12px;
+    min-width: 100px;
   }
-  
+
   .center-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    text-align: center;
+    padding: 10px;
   }
-  
-  .mat-grid-tile img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-  }
-  
+}
