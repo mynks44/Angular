@@ -1,0 +1,21 @@
+<h3 mat-dialog-title style="text-align:center; background:#3f51b5; color:white;">
+    Assignment #4 <br />
+    Winter 2025 for {{ data.NAMEsuranim | uppercase }}
+  </h3>
+  
+  <div mat-dialog-content>
+    <h4>
+      I am requesting a {{ data.APPEALsuranim | uppercase }} appeal.<br />
+      I am a {{ data.STATUSsuranim | uppercase }} student at the
+      {{ data.CAMPUSsuranim | uppercase }} campus.<br />
+      My credentials are ID: {{ data.IDsuranim | uppercase }} and Login:
+      {{ data.LOGINsuranim | uppercase }}.<br />
+      You can contact me at {{ data.CONTACTsuranim | uppercase }}.<br />
+      Appeal submitted on {{ data.DATEsuranim | date: 'medium' }}.
+    </h4>
+  </div>
+  
+  <div mat-dialog-actions>
+    <button mat-button (click)="close()">Close</button>
+  </div>
+  

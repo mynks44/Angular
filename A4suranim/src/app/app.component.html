@@ -1,0 +1,63 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+<h3 class="header">A4 for {{ suranimStartup.NAMEsuranim }}</h3>
+<hr class="header-line" />
+
+<form [formGroup]="suranimForm" (ngSubmit)="suranimSubmit()">
+  <div class="row">
+    <div class="input-block">
+      <label>Student ID:</label>
+      <input formControlName="IDsuranim" />
+    </div>
+    <div class="input-block">
+      <label>Student Login:</label>
+      <input formControlName="LOGINsuranim" />
+    </div>
+    <div class="input-block">
+      <label>Contact Email:</label>
+      <input formControlName="CONTACTsuranim" />
+    </div>
+  </div>
+<hr>
+  <div class="row">
+    <div class="section-block left-align-block">
+      <label class="section-label">Student Status?</label>
+      <div class="radio-inline" *ngFor="let status of suranimStatus">
+        <input type="radio" [value]="status" formControlName="STATUSsuranim" />
+        <label class="radio-label">{{ status }}</label>
+      </div>
+    </div>
+
+    <div class="section-block center-align-block">
+      <label class="section-label">Appeal Type</label>
+      <div class="radio-inline" *ngFor="let appeal of suranimAppeal">
+        <input type="radio" [value]="appeal" formControlName="APPEALsuranim" />
+        <label class="radio-label">{{ appeal }}</label>
+      </div>
+    </div>
+
+    <div class="section-block right-align-block">
+      <label class="section-label">Select Your Campus</label>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-select formControlName="CAMPUSsuranim">
+          <mat-option *ngFor="let campus of suranimCampus" [value]="campus">
+            • {{ campus }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="bottom-row">
+    <mat-form-field appearance="fill" class="date-field">
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="DATEsuranim" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button color="primary">Click to Submit Request</button>
+  </div>
+</form>
