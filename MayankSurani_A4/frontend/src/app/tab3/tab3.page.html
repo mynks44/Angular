@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login / Signup</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="floating">Username</ion-label>
+    <ion-input [(ngModel)]="username" autocomplete="username"></ion-input>
+  </ion-item>
+
+  <ion-item class="ion-margin-top">
+    <ion-label position="floating">Password</ion-label>
+    <ion-input [(ngModel)]="password" type="password" autocomplete="current-password"></ion-input>
+  </ion-item>
+
+  <ion-button class="ion-margin-top" expand="block" (click)="login()" [disabled]="loading">
+    {{ loading ? 'Please wait…' : 'Login' }}
+  </ion-button>
+
+  <ion-button expand="block" fill="outline" (click)="signup()" [disabled]="loading">
+    {{ loading ? 'Please wait…' : 'Signup' }}
+  </ion-button>
+
+  <ion-text color="medium"><p class="ion-margin-top">{{ message }}</p></ion-text>
+</ion-content>
